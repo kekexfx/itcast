@@ -40,5 +40,20 @@
 
                 2.使用输出流，将数据输出到客户端浏览器
 
+*案例：
+    1.完成重定向
+        *重定向：资源跳转的方式
+        *代码实现：
+            //访问/responseDemo1,会自动跳转到/访问/responseDemo2资源
+                    //1.设置状态码为302
+                    response.setStatus(302);
+                    //2.设置响应头location
+                    response.setHeader("location","/day15/responseDemo2");
+
+                    //简单的重定向方法：
+                    response.sendRedirect("/day15/requestDemo2");
+    2.服务器输出字符数据到浏览器
+    3.服务器输出字节数据到浏览器
+    4.验证码
 
 
